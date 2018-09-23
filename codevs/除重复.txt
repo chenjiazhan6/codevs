@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a[1001]={0},b[100]={0};
+    int nums = 0,t = 0,i = 0,j = 0;
+    scanf("%d",&nums);
+    for(i = 0; i < nums; i++)
+    {
+        scanf("%d",&t);
+        a[t] = 1;
+    }
+    for(i = 1 ; i <=1001; i++)
+    {
+        if(a[i] == 1){
+            b[j++] = i;
+        }
+    }
+    i = 0;
+    printf("%d\n",j);
+    while(b[i]!=0){
+        printf("%d ",b[i]);
+        i++;
+        if(i == j)
+            break;
+    }
+    return 0;
+}
